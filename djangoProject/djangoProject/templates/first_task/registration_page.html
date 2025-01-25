@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация покупателя</title>
+  <style>.col_input{background-color:#e8f0fe}</style>
+</head>
+<body>
+<header>
+  <h1>Регистрация покупателя</h1>
+  {% if error %}<h2 style="color: red">{{ error }}</h2>{% endif %}
+</header>
+<main>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><button type="submit">Зарегистрироваться</button></p>
+  </form>
+</main>
+</body>
+</html>
